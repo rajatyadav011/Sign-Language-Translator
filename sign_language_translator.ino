@@ -17,6 +17,9 @@ const int threshold3 = 500;
 const int threshold4 = 500;
 const int threshold5 = 500;
 
+// Store detected signs
+String detectedSigns = "";
+
 void setup() {
   // Set up the LCD's number of columns and rows
   lcd.begin(16, 2);
@@ -41,11 +44,24 @@ void loop() {
   // Determine which gesture is being made
   char letter = detectLetter(flex1, flex2, flex3, flex4, flex5);
 
-  // Display the letter on the LCD
+  // Add detected letter to the string if it's a valid letter
+  if (letter != ' ') {
+    detectedSigns += letter;
+  }
+
+  // Display the detected signs on the LCD
   lcd.clear();
   lcd.setCursor(0, 0);
-  lcd.print("Sign: ");
-  lcd.print(letter);
+  lcd.print("Signs: ");
+  
+  // Handle string overflow to fit on the display
+  if (detectedSigns.length() > 16) {
+    lcd.setCursor(0, 1);
+    lcd.print(detectedSigns.substring(detectedSigns.length() - 16));
+  } else {
+    lcd.setCursor(0, 1);
+    lcd.print(detectedSigns);
+  }
 
   // Small delay to debounce
   delay(500);
