@@ -30,3 +30,7 @@ This project is a simple real-time sign language translator using Arduino.
 - Use more advanced gesture recognition techniques.
 - Expand the project to recognize more gestures and map them to corresponding words or phrases.
 ![Demo](https://github.com/user-attachments/assets/47ca8adf-ee06-4828-b424-2f24a9f9c4c8)
+
+
+
+![Sign image](https://github.com/user-attachments/assets/9685000b-6748-4839-b4e7-6814ae11d585)
