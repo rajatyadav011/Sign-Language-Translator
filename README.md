@@ -1,6 +1,8 @@
 # Sign Language Translator
 
 This project is a simple real-time sign language translator using Arduino.
+![Signs](https://github.com/user-attachments/assets/010e70d9-6f59-4ff9-b67a-101fc0ab5519)
+
 
 ## Components
 
