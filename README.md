@@ -6,6 +6,7 @@ This project is a simple real-time sign language translator using Arduino.
 ![Signs](https://github.com/user-attachments/assets/010e70d9-6f59-4ff9-b67a-101fc0ab5519)
 
 
+
 ## Components
 
 - Arduino Uno
@@ -14,16 +15,19 @@ This project is a simple real-time sign language translator using Arduino.
 - Breadboard and Wires
 - 16x2 LCD Display
 
+
 ## How to Set Up
 
 1. Connect the flex sensors to the Arduino.
 2. Connect the LCD display to the Arduino.
 3. Upload the provided Arduino sketch to your Arduino board.
 
+
 ## How to Run
 
 1. Power the Arduino.
 2. Make different hand gestures to see corresponding letters displayed on the LCD.
+
 
 ## Future Enhancements
 
