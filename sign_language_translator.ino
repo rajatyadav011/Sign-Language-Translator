@@ -1,6 +1,6 @@
 #include <LiquidCrystal.h>
 
-// Initialize the library with the numbers of the interface pins
+// Initialize the LCD with the interface pins
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
 // Define flex sensor pins
@@ -21,14 +21,10 @@ const int threshold5 = 500;
 String detectedSigns = "";
 
 void setup() {
-  // Set up the LCD's number of columns and rows
-  lcd.begin(16, 2);
-  // Print a message to the LCD
+  lcd.begin(16, 2); // Set up LCD columns and rows
   lcd.print("Sign Language");
   lcd.setCursor(0, 1);
   lcd.print("Translator");
-
-  // Allow some time for the user to read the message
   delay(2000);
   lcd.clear();
 }
@@ -41,29 +37,24 @@ void loop() {
   int flex4 = analogRead(flexSensor4);
   int flex5 = analogRead(flexSensor5);
 
-  // Determine which gesture is being made
+  // Detect letter based on flex sensor readings
   char letter = detectLetter(flex1, flex2, flex3, flex4, flex5);
 
-  // Add detected letter to the string if it's a valid letter
   if (letter != ' ') {
     detectedSigns += letter;
   }
 
-  // Display the detected signs on the LCD
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Signs: ");
-  
-  // Handle string overflow to fit on the display
+  lcd.setCursor(0, 1);
+
   if (detectedSigns.length() > 16) {
-    lcd.setCursor(0, 1);
     lcd.print(detectedSigns.substring(detectedSigns.length() - 16));
   } else {
-    lcd.setCursor(0, 1);
     lcd.print(detectedSigns);
   }
 
-  // Small delay to debounce
   delay(500);
 }
 
