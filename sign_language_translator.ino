@@ -1,4 +1,5 @@
 #include <LiquidCrystal.h>
+#include <string.h>
 
 // Initialize the LCD with the interface pins
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
@@ -18,7 +19,7 @@ const int threshold4 = 500;
 const int threshold5 = 500;
 
 // Store detected signs
-String detectedSigns = "";
+char detectedSigns[17] = "";
 
 void setup() {
   lcd.begin(16, 2); // Set up LCD columns and rows
@@ -41,7 +42,11 @@ void loop() {
   char letter = detectLetter(flex1, flex2, flex3, flex4, flex5);
 
   if (letter != ' ') {
-    detectedSigns += letter;
+    int len = strlen(detectedSigns);
+    if (len < 16) {
+      detectedSigns[len] = letter;
+      detectedSigns[len + 1] = '\0';
+    }
   }
 
   lcd.clear();
@@ -49,11 +54,7 @@ void loop() {
   lcd.print("Signs: ");
   lcd.setCursor(0, 1);
 
-  if (detectedSigns.length() > 16) {
-    lcd.print(detectedSigns.substring(detectedSigns.length() - 16));
-  } else {
-    lcd.print(detectedSigns);
-  }
+  lcd.print(detectedSigns);
 
   delay(500);
 }
