@@ -1,40 +1,79 @@
-# Sign Language Translator
+# 🤟 Sign Language Translator
 
-This project is a simple real-time sign language translator using Arduino.
+A real-time **Sign Language Translator** built using **Arduino** and **Flex Sensors**. This project helps in bridging the communication gap between speech-impaired individuals and others. 🌍✨
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/010e70d9-6f59-4ff9-b67a-101fc0ab5519" width="600"/>
+</p>
 
-![Signs](https://github.com/user-attachments/assets/010e70d9-6f59-4ff9-b67a-101fc0ab5519)
+---
 
+## ⚡ Features
 
+✔️ Detects hand gestures in real-time  
+✔️ Displays corresponding text on an **LCD screen**  
+✔️ Easy-to-build using Arduino & Flex Sensors  
+✔️ Low-cost & efficient  
 
-## Components
+---
 
-- Arduino Uno
-- Flex Sensors
-- Resistors
-- Breadboard and Wires
-- 16x2 LCD Display
+## 🛠 Tech Stack  
 
+| Component       | Details |
+|---------------|---------|
+| 🖥 **Microcontroller** | Arduino Uno |
+| 🎛 **Sensors** | Flex Sensors |
+| 🔌 **Other Components** | Resistors, Breadboard, Wires |
+| 📟 **Output** | 16x2 LCD Display |
+| 🔗 **Programming** | C / Arduino IDE |
 
-## How to Set Up
+---
 
-1. Connect the flex sensors to the Arduino.
-2. Connect the LCD display to the Arduino.
-3. Upload the provided Arduino sketch to your Arduino board.
+## 🛠️ **Setup Instructions**  
 
+### 🔌 Hardware Setup  
 
-## How to Run
+1️⃣ Connect the **Flex Sensors** to the Arduino.  
+2️⃣ Attach the **LCD Display** using jumper wires.  
+3️⃣ Use **resistors** for accurate sensor readings.  
+4️⃣ Upload the **Arduino Sketch** (provided in the repo).  
 
-1. Power the Arduino.
-2. Make different hand gestures to see corresponding letters displayed on the LCD.
+### ▶️ How to Run  
 
+1️⃣ Power the **Arduino Board**.  
+2️⃣ Make different **hand gestures**.  
+3️⃣ The **LCD Display** will show the recognized letters/words.  
 
-## Future Enhancements
+---
 
-- Use more advanced gesture recognition techniques.
-- Expand the project to recognize more gestures and map them to corresponding words or phrases.
-![Demo](https://github.com/user-attachments/assets/47ca8adf-ee06-4828-b424-2f24a9f9c4c8)
+## 🔮 **Future Enhancements**  
 
+✨ Implement **Machine Learning** for more advanced gesture recognition.  
+✨ Add **Bluetooth/Wi-Fi** connectivity for mobile app integration.  
+✨ Expand the dataset for recognizing **full words & sentences**.  
 
+---
 
-![Sign image](https://github.com/user-attachments/assets/9685000b-6748-4839-b4e7-6814ae11d585)
+## 📸 **Project Demo**  
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/47ca8adf-ee06-4828-b424-2f24a9f9c4c8" width="500"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9685000b-6748-4839-b4e7-6814ae11d585" width="500"/>
+</p>
+
+---
+
+## 💡 **Contributing**  
+
+We welcome contributions! Feel free to fork this repo, open an issue, or submit a pull request.  
+
+💬 **For any queries, reach out to:**  
+📧 [im.rajat33@gmail.com](mailto:im.rajat33@gmail.com)  
+🔗 [LinkedIn](https://linkedin.com/in/rajatyadav011)  
+
+---
+
+⭐ **If you like this project, don't forget to give it a star!** ⭐
